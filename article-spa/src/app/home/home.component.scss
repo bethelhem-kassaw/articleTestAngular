@@ -1,0 +1,143 @@
+/* Container styling */
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 50px;
+}
+
+/* Grid layout for articles */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 45px;
+  margin-top: 70px;
+}
+
+/* Article image styling */
+.article-image {
+  height: 217px;
+  object-fit: cover;
+}
+
+/* Article card styling */
+.article-card {
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Content section styling */
+.content {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Filter section styling */
+.filter {
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Custom form field styling */
+mat-form-field {
+  width: 50%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  &.formFiled {
+    --mat-form-field-container-height: 40px;
+    --mat-form-field-container-vertical-padding: 8px;
+  }
+}
+
+/* Input field styling */
+.input {
+  width: 100%;
+  height: 100%;
+}
+
+/* Time and date section styling */
+.time {
+  display: flex;
+  gap: 2px;
+  color: #363636;
+
+  .calendarIcon {
+    font-size: 16px;
+    color: #363636;
+  }
+
+  .date {
+    font-size: 14px;
+    line-height: 21px;
+    color: #363636;
+    font-weight: 400;
+  }
+}
+
+/* Content title styling */
+.content-title {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29.26px;
+  color: #363636;
+  height: 56px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Card content styling */
+mat-card-content {
+  margin-top: 20px;
+  padding: 0;
+  height: 96px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Highlighted text styling */
+.highlighted-text {
+  background-color: yellow;
+}
+
+/* Results number section styling */
+.resultNumber {
+  width: 100%;
+  margin-top: 40px;
+  border-bottom: 1px solid #EAEAEA;
+
+  p {
+    font-size: 16px;
+    color: #363636;
+    margin: 0;
+  }
+}
+
+/* Read more link styling */
+.readmore {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  text-decoration: none;
+  color: #363636;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+
+  mat-icon {
+    font-size: x-large;
+  }
+}
+
+/* Ensure inline styles for span highlight are correctly overridden */
+span[style] {
+  background-color: yellow;
+}

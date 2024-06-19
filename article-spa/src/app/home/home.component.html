@@ -1,0 +1,35 @@
+<div class="container">
+  <div>
+    <div class="filter">
+      Filter by keywords
+    </div>
+    <mat-form-field  appearance="outline" class="formFiled" >
+    <!-- <mat-label><mat-icon fontIcon="search"></mat-icon></mat-label>  -->
+     <mat-icon matPrefix fontIcon="search"></mat-icon>
+      <input matInput [formControl]="searchControl" class="input">
+    </mat-form-field>
+  </div>
+
+  <div   class="resultNumber">
+    <p>Results: {{filteredArticles.length}} </p>
+  </div>
+  
+  <div class="article-grid">
+    <mat-card *ngFor="let article of filteredArticles" class="article-card" >
+      <img mat-card-image [src]="article.imageUrl" alt="Article Image" class="article-image">
+      
+      <div class="content">
+        <div class="time">
+          <mat-icon class="calendarIcon" fontIcon="calendar_today"></mat-icon>
+          <div class="date">
+            {{ article.publishedAt | date:'dd MMM, yyyy' }}
+          </div>
+        </div>
+      <!-- <mat-card-title  class=" content-title" [innerHTML]="highlight(article.title)"></mat-card-title> -->
+      <p class="content-title" [innerHTML]="highlight(article.title)"></p>
+      <mat-card-content [innerHTML]="highlight(article.summary)"></mat-card-content>
+      <a class="readmore" [routerLink]="['/article', article.id]"><p>Read More</p> <mat-icon style="font-size: x-large;" fontIcon="arrow_forward"></mat-icon></a>
+    </div>
+    </mat-card>
+  </div>
+

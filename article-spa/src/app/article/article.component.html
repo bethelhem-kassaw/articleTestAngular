@@ -1,0 +1,24 @@
+<!-- <mat-card *ngIf="article">
+    <img mat-card-image [src]="article.imageUrl" alt="Article Image">
+    <mat-card-title>{{ article.title }}</mat-card-title>
+    <mat-card-content>{{ article.summary }}</mat-card-content>
+</mat-card> -->
+
+<div *ngIf="article">
+  <div class="imagebg">
+    <img [src]="article.imageUrl" alt="Article Image">
+  </div>
+  <div class="article-content">
+    <div class="content">
+      <div class="title">{{ article.title }}</div>
+      <p>{{ article.summary }}</p>
+      
+    </div>
+    <div class="linkcontainer">
+      <mat-icon fontIcon="arrow_back"></mat-icon>
+    <a href="/">Back to homepage</a>
+
+    </div>
+  </div>
+  
+</div>
